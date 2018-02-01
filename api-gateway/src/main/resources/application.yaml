@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: 1101
+
+#多实例配置，通过一组zuul.routes.<route>.path与zuul.routes.<route>.serviceId参数对的方式配置
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eureka-client
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
