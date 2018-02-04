@@ -9,5 +9,35 @@
     <packaging>pom</packaging>
     <version>1.0</version>
 
+    <modules>
+        <module>api-gateway</module>
+
+        <module>consul-client</module>
+
+        <module>eureka-server</module>
+
+        <module>eureka-client</module>
+
+        <module>eureka-consumer</module>
+
+        <module>eureka-consumer-ribbon</module>
+
+        <module>eureka-consumer-feign</module>
+
+        <module>eureka-consumer-ribbon-hystrix</module>
+
+        <module>hello-stream</module>
+
+        <module>hystrix-dashboard</module>
+
+        <module>kafka-learning</module>
+
+        <module>rabbitmq</module>
+
+        <module>turbine</module>
+
+        <module>turbine-amqp</module>
+    </modules>
+
 
 </project>
