@@ -10,12 +10,19 @@ public class RabbitMQClient {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+ /*   @Autowired
+    private TopicExchange exchange;*/
+
     /**
      * dbh 这个是路由规则（routingKey）
      * 它的值表明将消息发送到指定队列dbh中去
      * @param message
      */
     public void send(String message) {
-        rabbitTemplate.convertAndSend("dbh", message);
+      /*  rabbitTemplate.convertAndSend("dbh", message);
+       rabbitTemplate.convertAndSend(exchange.getName(), "rpc-dbh", message );*/
+      rabbitTemplate.convertAndSend("fanout-exchange","",message );
     }
+
+
 }
